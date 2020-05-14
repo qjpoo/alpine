@@ -11,8 +11,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/re
     && apk add curl bash tree tzdata \
     && cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo -ne "Alpine Linux image. (`uname -rsv`)\n" >> /root/.built \
-    &&  rm  -rf  /var/cache/apk/ * \
-    &&  rm  -rf  /root/ .cache \
-    &&  rm  -rf  /tmp/ *
+    &&  rm  -rf  /var/cache/apk/* \
+    &&  rm  -rf  /root/.cache \
+    &&  rm  -rf  /tmp/*
 # Define bash as default command
 CMD ["/bin/bash"]
